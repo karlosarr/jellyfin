@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  jellyfin:
+     image: jellyfin/jellyfin:latest
+     ports:
+       - 8096:8096
+     volumes:
+       - ./config:/config 
+       - ./cache:/cache
+       - ./media:/media
+     networks:
+       - net
+networks:
+  net:

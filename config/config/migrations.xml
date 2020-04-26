@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<MigrationOptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Applied>
+    <ValueTupleOfGuidString>
+      <Item1>4124c2cd-e939-4ffb-9be9-9b311c413638</Item1>
+      <Item2>DisableTranscodingThrottling</Item2>
+    </ValueTupleOfGuidString>
+    <ValueTupleOfGuidString>
+      <Item1>ef103419-8451-40d8-9f34-d1a8e93a1679</Item1>
+      <Item2>CreateLoggingConfigHeirarchy</Item2>
+    </ValueTupleOfGuidString>
+  </Applied>
+</MigrationOptions>
