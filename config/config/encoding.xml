@@ -4,7 +4,7 @@
   <DownMixAudioBoost>2</DownMixAudioBoost>
   <EnableThrottling>false</EnableThrottling>
   <ThrottleDelaySeconds>180</ThrottleDelaySeconds>
-  <EncoderAppPathDisplay>/usr/lib/jellyfin-ffmpeg/ffmpeg</EncoderAppPathDisplay>
+  <EncoderAppPathDisplay>/usr/bin/ffmpeg</EncoderAppPathDisplay>
   <VaapiDevice>/dev/dri/renderD128</VaapiDevice>
   <H264Crf>23</H264Crf>
   <H265Crf>28</H265Crf>

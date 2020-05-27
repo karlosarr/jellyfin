@@ -1,0 +1,243 @@
+[2020-05-27 14:15:23.897 +00:00] [INF] [5] Main: Jellyfin version: "10.5.5"
+[2020-05-27 14:15:24.032 +00:00] [INF] [5] Main: Arguments: ["/jellyfin/jellyfin.dll", "--datadir", "/config", "--cachedir", "/cache", "--ffmpeg", "/usr/bin/ffmpeg"]
+[2020-05-27 14:15:24.067 +00:00] [INF] [5] Main: Operating system: "Linux"
+[2020-05-27 14:15:24.069 +00:00] [INF] [5] Main: Architecture: Arm64
+[2020-05-27 14:15:24.076 +00:00] [INF] [5] Main: 64-Bit Process: True
+[2020-05-27 14:15:24.077 +00:00] [INF] [5] Main: User Interactive: True
+[2020-05-27 14:15:24.078 +00:00] [INF] [5] Main: Processor count: 4
+[2020-05-27 14:15:24.078 +00:00] [INF] [5] Main: Program data path: "/config"
+[2020-05-27 14:15:24.080 +00:00] [INF] [5] Main: Web resources path: "/jellyfin/jellyfin-web"
+[2020-05-27 14:15:24.082 +00:00] [INF] [5] Main: Application directory: "/jellyfin/"
+[2020-05-27 14:15:25.581 +00:00] [INF] [5] ServerConfigurationManager: Setting cache path: "/cache"
+[2020-05-27 14:15:25.807 +00:00] [INF] [5] App: Loading assemblies
+[2020-05-27 14:15:27.082 +00:00] [WRN] [5] Emby.Server.Implementations.Library.UserManager: No users, creating one with username "root"
+[2020-05-27 14:15:28.736 +00:00] [INF] [5] ServerConfigurationManager: Saving system configuration
+[2020-05-27 14:15:28.741 +00:00] [INF] [5] ServerConfigurationManager: Setting cache path: "/cache"
+[2020-05-27 14:15:32.850 +00:00] [INF] [5] Jellyfin.Server.Migrations.MigrationRunner: Marking all known migrations as applied because this is a fresh install
+[2020-05-27 14:15:33.032 +00:00] [INF] [5] Main: Kestrel listening on all interfaces
+[2020-05-27 14:15:34.141 +00:00] [WRN] [5] Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager: No XML encryptor configured. Key {1738c060-14e7-4e33-af72-d0ee27b87bce} may be persisted to storage in unencrypted form.
+[2020-05-27 14:15:34.460 +00:00] [INF] [5] App: Running startup tasks
+[2020-05-27 14:15:34.548 +00:00] [INF] [5] TaskManager: Daily trigger for "Extract Chapter Images" set to fire at 05/28/2020 02:00, which is 11:44:25.4517456 from now.
+[2020-05-27 14:15:37.587 +00:00] [INF] [10] TaskManager: "StartupTrigger" fired for task: "Update Plugins"
+[2020-05-27 14:15:37.599 +00:00] [INF] [10] TaskManager: Queueing task "PluginUpdateTask"
+[2020-05-27 14:15:37.628 +00:00] [INF] [4] TaskManager: Executing "Update Plugins"
+[2020-05-27 14:15:37.776 +00:00] [INF] [5] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Found ffmpeg version "4.1.4"
+[2020-05-27 14:15:38.580 +00:00] [INF] [5] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available "decoders": ["h264", "hevc", "mpeg2video", "aac", "ac3", "mp3"]
+[2020-05-27 14:15:39.076 +00:00] [INF] [5] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available "encoders": ["libx264", "h264_omx", "h264_v4l2m2m", "h264_vaapi", "libx265", "hevc_vaapi", "mpeg4", "msmpeg4", "libvpx", "libvpx-vp9", "aac", "ac3", "libmp3lame", "libopus", "libvorbis", "srt"]
+[2020-05-27 14:15:39.083 +00:00] [INF] [5] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: FFmpeg: SetByArgument: "/usr/bin/ffmpeg"
+[2020-05-27 14:15:39.096 +00:00] [INF] [5] App: ServerId: "f1aec331be6942548669fb41bd5137f7"
+[2020-05-27 14:15:40.162 +00:00] [INF] [4] App: Executed all pre-startup entry points in 0:00:00.9928189
+[2020-05-27 14:15:40.164 +00:00] [INF] [4] App: Core startup complete
+[2020-05-27 14:15:41.273 +00:00] [INF] [5] Dlna: Registering publisher for "urn:schemas-upnp-org:device:MediaServer:1" on "172.19.0.2"
+[2020-05-27 14:15:41.954 +00:00] [INF] [4] App: Executed all post-startup entry points in 0:00:01.7887293
+[2020-05-27 14:15:41.955 +00:00] [INF] [4] Main: Startup complete 0:00:19.6484047
+[2020-05-27 14:15:48.246 +00:00] [ERR] [10] TaskManager: Error
+System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsyncInternal(HttpRequestOptions options, HttpMethod httpMethod)
+   at Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync(HttpRequestOptions options, HttpMethod httpMethod)
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePackages(CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePluginUpdates(CancellationToken cancellationToken)+MoveNext()
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePluginUpdates(CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at System.Linq.AsyncEnumerable.<ToListAsync>g__Core|620_0[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in d:\a\1\s\Ix.NET\Source\System.Linq.Async\System\Linq\Operators\ToList.cs:line 27
+   at System.Linq.AsyncEnumerable.<ToListAsync>g__Core|620_0[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in d:\a\1\s\Ix.NET\Source\System.Linq.Async\System\Linq\Operators\ToList.cs:line 27
+   at Emby.Server.Implementations.ScheduledTasks.PluginUpdateTask.Execute(CancellationToken cancellationToken, IProgress`1 progress)
+   at Emby.Server.Implementations.ScheduledTasks.ScheduledTaskWorker.ExecuteInternal(TaskOptions options)
+[2020-05-27 14:15:48.433 +00:00] [INF] [10] TaskManager: "Update Plugins" Failed after 0 minute(s) and 10 seconds
+[2020-05-27 14:15:48.914 +00:00] [INF] [10] TaskManager: ExecuteQueuedTasks
+[2020-05-27 14:18:07.482 +00:00] [WRN] [10] Emby.Server.Implementations.HttpServer.HttpListenerHost: HTTP Response 200 to "192.168.100.2". Time (slow): 0:00:00.7951782. "http://192.168.100.36:8096/web/bundle.js?v=10.5.5"
+[2020-05-27 14:18:08.804 +00:00] [ERR] [15] Emby.Server.Implementations.HttpServer.HttpListenerHost: Error processing request: "Access token is invalid or expired". URL: "http://192.168.100.36:8096/Users/6d66210c06574265932dac02c5fb51dc"
+[2020-05-27 14:18:08.880 +00:00] [INF] [21] Jellyfin.Api.Auth.CustomAuthenticationHandler: "CustomAuthentication" was not authenticated. Failure message: "Access token is invalid or expired."
+[2020-05-27 14:18:08.888 +00:00] [ERR] [15] Emby.Server.Implementations.HttpServer.HttpListenerHost: Error processing request: "Access token is invalid or expired". URL: "http://192.168.100.36:8096/Users/6d66210c06574265932dac02c5fb51dc"
+[2020-05-27 14:18:08.855 +00:00] [ERR] [22] Emby.Server.Implementations.HttpServer.HttpListenerHost: Error processing request. URL: "http://192.168.100.36:8096/Users/6d66210c06574265932dac02c5fb51dc/Views"
+System.ArgumentException: User Id specified in the query does not exist. (Parameter 'query')
+   at Emby.Server.Implementations.Library.UserViewManager.GetUserViews(UserViewQuery query)
+   at MediaBrowser.Api.UserLibrary.UserViewsService.Get(GetUserViews request)
+   at Emby.Server.Implementations.Services.ServiceExecGeneral.Execute(Type serviceType, IRequest request, Object instance, Object requestDto, String requestName)
+   at Emby.Server.Implementations.Services.ServiceController.Execute(HttpListenerHost httpHost, Object requestDto, IRequest req)
+   at Emby.Server.Implementations.Services.ServiceHandler.ProcessRequestAsync(HttpListenerHost httpHost, IRequest httpReq, HttpResponse httpRes, ILogger logger, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.HttpServer.HttpListenerHost.RequestHandler(IHttpRequest httpReq, String urlString, String host, String localPath, CancellationToken cancellationToken)
+[2020-05-27 15:15:34.545 +00:00] [INF] [14] TaskManager: "IntervalTrigger" fired for task: "Download missing subtitles"
+[2020-05-27 15:15:34.548 +00:00] [INF] [14] TaskManager: Queueing task "SubtitleScheduledTask"
+[2020-05-27 15:15:34.549 +00:00] [INF] [14] TaskManager: Executing "Download missing subtitles"
+[2020-05-27 15:15:34.564 +00:00] [INF] [21] TaskManager: "IntervalTrigger" fired for task: "Refresh People"
+[2020-05-27 15:15:34.564 +00:00] [INF] [21] TaskManager: Queueing task "PeopleValidationTask"
+[2020-05-27 15:15:34.565 +00:00] [INF] [21] TaskManager: Executing "Refresh People"
+[2020-05-27 15:15:34.584 +00:00] [INF] [22] TaskManager: "IntervalTrigger" fired for task: "Scan Media Library"
+[2020-05-27 15:15:34.584 +00:00] [INF] [10] TaskManager: "IntervalTrigger" fired for task: "Update Plugins"
+[2020-05-27 15:15:34.590 +00:00] [INF] [10] TaskManager: Queueing task "PluginUpdateTask"
+[2020-05-27 15:15:34.585 +00:00] [INF] [22] TaskManager: Queueing task "RefreshMediaLibraryTask"
+[2020-05-27 15:15:34.594 +00:00] [INF] [22] TaskManager: Executing "Scan Media Library"
+[2020-05-27 15:15:34.597 +00:00] [INF] [10] TaskManager: Executing "Update Plugins"
+[2020-05-27 15:15:34.613 +00:00] [INF] [14] TaskManager: "Download missing subtitles" Completed after 0 minute(s) and 0 seconds
+[2020-05-27 15:15:34.635 +00:00] [INF] [14] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:34.707 +00:00] [INF] [15] TaskManager: "IntervalTrigger" fired for task: "Refresh Guide"
+[2020-05-27 15:15:34.707 +00:00] [INF] [14] TaskManager: "IntervalTrigger" fired for task: "Clean Cache Directory"
+[2020-05-27 15:15:34.711 +00:00] [INF] [14] TaskManager: Queueing task "DeleteCacheFileTask"
+[2020-05-27 15:15:34.712 +00:00] [INF] [14] TaskManager: Executing "Clean Cache Directory"
+[2020-05-27 15:15:34.720 +00:00] [INF] [15] TaskManager: Queueing task "RefreshChannelsScheduledTask"
+[2020-05-27 15:15:34.725 +00:00] [INF] [15] TaskManager: Executing "Refresh Guide"
+[2020-05-27 15:15:34.730 +00:00] [INF] [21] LibraryManager: People validation complete
+[2020-05-27 15:15:34.733 +00:00] [INF] [21] TaskManager: "Refresh People" Completed after 0 minute(s) and 0 seconds
+[2020-05-27 15:15:34.738 +00:00] [INF] [21] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:34.809 +00:00] [INF] [22] LibraryManager: Validating media library
+[2020-05-27 15:15:34.811 +00:00] [INF] [21] TaskManager: "IntervalTrigger" fired for task: "Clean Log Directory"
+[2020-05-27 15:15:34.815 +00:00] [INF] [21] TaskManager: Queueing task "DeleteLogFileTask"
+[2020-05-27 15:15:34.814 +00:00] [INF] [14] TaskManager: "Clean Cache Directory" Completed after 0 minute(s) and 0 seconds
+[2020-05-27 15:15:34.815 +00:00] [INF] [21] TaskManager: Executing "Clean Log Directory"
+[2020-05-27 15:15:34.829 +00:00] [INF] [14] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:34.904 +00:00] [INF] [14] TaskManager: "IntervalTrigger" fired for task: "Refresh Users"
+[2020-05-27 15:15:34.905 +00:00] [INF] [14] TaskManager: Queueing task "RefreshUsersMetadata"
+[2020-05-27 15:15:34.906 +00:00] [INF] [14] TaskManager: Executing "Refresh Users"
+[2020-05-27 15:15:34.904 +00:00] [INF] [21] TaskManager: "Clean Log Directory" Completed after 0 minute(s) and 0 seconds
+[2020-05-27 15:15:34.924 +00:00] [INF] [21] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:35.002 +00:00] [INF] [21] TaskManager: "IntervalTrigger" fired for task: "Refresh Channels"
+[2020-05-27 15:15:35.005 +00:00] [INF] [21] TaskManager: Queueing task "RefreshChannelsScheduledTask"
+[2020-05-27 15:15:35.006 +00:00] [INF] [21] TaskManager: Executing "Refresh Channels"
+[2020-05-27 15:15:35.054 +00:00] [INF] [21] TaskManager: "Refresh Channels" Completed after 0 minute(s) and 0 seconds
+[2020-05-27 15:15:35.059 +00:00] [INF] [21] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:35.374 +00:00] [INF] [14] TaskManager: "Refresh Users" Completed after 0 minute(s) and 0 seconds
+[2020-05-27 15:15:35.378 +00:00] [INF] [14] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:36.312 +00:00] [INF] [22] TaskManager: "Scan Media Library" Completed after 0 minute(s) and 1 seconds
+[2020-05-27 15:15:36.315 +00:00] [INF] [22] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:38.570 +00:00] [INF] [14] LiveTvManager: Refreshing guide with 7 days of guide data
+[2020-05-27 15:15:38.622 +00:00] [INF] [14] TaskManager: "Refresh Guide" Completed after 0 minute(s) and 3 seconds
+[2020-05-27 15:15:38.627 +00:00] [INF] [14] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:15:44.638 +00:00] [ERR] [10] TaskManager: Error
+System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsyncInternal(HttpRequestOptions options, HttpMethod httpMethod)
+   at Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync(HttpRequestOptions options, HttpMethod httpMethod)
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePackages(CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePluginUpdates(CancellationToken cancellationToken)+MoveNext()
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePluginUpdates(CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at System.Linq.AsyncEnumerable.<ToListAsync>g__Core|620_0[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in d:\a\1\s\Ix.NET\Source\System.Linq.Async\System\Linq\Operators\ToList.cs:line 27
+   at System.Linq.AsyncEnumerable.<ToListAsync>g__Core|620_0[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in d:\a\1\s\Ix.NET\Source\System.Linq.Async\System\Linq\Operators\ToList.cs:line 27
+   at Emby.Server.Implementations.ScheduledTasks.PluginUpdateTask.Execute(CancellationToken cancellationToken, IProgress`1 progress)
+   at Emby.Server.Implementations.ScheduledTasks.ScheduledTaskWorker.ExecuteInternal(TaskOptions options)
+[2020-05-27 15:15:44.711 +00:00] [INF] [10] TaskManager: "Update Plugins" Failed after 0 minute(s) and 10 seconds
+[2020-05-27 15:15:44.750 +00:00] [INF] [10] TaskManager: ExecuteQueuedTasks
+[2020-05-27 15:38:56.555 +00:00] [INF] [14] App: WS "http://192.168.100.36:8096/socket?api_key=b8b2c36a934b41859d2a025af2403d3b&deviceId=TW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzgzLjAuNDEwMy42MSBTYWZhcmkvNTM3LjM2IEVkZy84My4wLjQ3OC4zN3wxNTkwMzgxODgyOTUy". UserAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36 Edg/83.0.478.37"
+[2020-05-27 15:38:56.591 +00:00] [WRN] [14] SessionWebSocketListener: Unable to determine session based on url: "http://192.168.100.36:8096/socket?api_key=b8b2c36a934b41859d2a025af2403d3b&deviceId=TW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzgzLjAuNDEwMy42MSBTYWZhcmkvNTM3LjM2IEVkZy84My4wLjQ3OC4zN3wxNTkwMzgxODgyOTUy"
+[2020-05-27 15:51:23.173 +00:00] [ERR] [10] App: AcceptWebSocketAsync error
+System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at Emby.Server.Implementations.SocketSharp.WebSocketSharpListener.ProcessWebSocketRequest(HttpContext ctx)
+[2020-05-27 16:15:35.605 +00:00] [INF] [22] TaskManager: "IntervalTrigger" fired for task: "Scan Media Library"
+[2020-05-27 16:15:35.607 +00:00] [INF] [22] TaskManager: Queueing task "RefreshMediaLibraryTask"
+[2020-05-27 16:15:35.611 +00:00] [INF] [22] TaskManager: Executing "Scan Media Library"
+[2020-05-27 16:15:35.613 +00:00] [INF] [22] LibraryManager: Validating media library
+[2020-05-27 16:15:35.708 +00:00] [INF] [22] TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2020-05-27 16:15:35.712 +00:00] [INF] [22] TaskManager: ExecuteQueuedTasks
+[2020-05-27 16:15:35.785 +00:00] [INF] [21] TaskManager: "IntervalTrigger" fired for task: "Refresh Guide"
+[2020-05-27 16:15:35.786 +00:00] [INF] [21] TaskManager: Queueing task "RefreshChannelsScheduledTask"
+[2020-05-27 16:15:35.787 +00:00] [INF] [15] TaskManager: Executing "Refresh Guide"
+[2020-05-27 16:15:38.786 +00:00] [INF] [14] LiveTvManager: Refreshing guide with 7 days of guide data
+[2020-05-27 16:15:38.799 +00:00] [INF] [14] TaskManager: "Refresh Guide" Completed after 0 minute(s) and 3 seconds
+[2020-05-27 16:15:38.806 +00:00] [INF] [14] TaskManager: ExecuteQueuedTasks
+[2020-05-27 18:07:22.492 +00:00] [INF] [2] Main: Received a SIGTERM signal, shutting down
+[2020-05-27 18:07:22.514 +00:00] [INF] [2] App: Disposing "CoreAppHost"
+[2020-05-27 18:07:22.517 +00:00] [INF] [2] App: Disposing "ActivityLogWebSocketListener"
+[2020-05-27 18:07:22.540 +00:00] [INF] [2] App: Disposing "SessionInfoWebSocketListener"
+[2020-05-27 18:07:22.557 +00:00] [INF] [2] App: Disposing "ScheduledTasksWebSocketListener"
+[2020-05-27 18:07:22.565 +00:00] [INF] [2] App: Disposing "SessionWebSocketListener"
+[2020-05-27 18:07:22.569 +00:00] [INF] [2] App: Disposing "EmbyTV"
+[2020-05-27 18:07:22.575 +00:00] [INF] [2] App: Disposing "ApiEntryPoint"
+[2020-05-27 18:07:22.586 +00:00] [INF] [2] App: Disposing "ServerEntryPoint"
+[2020-05-27 18:07:22.587 +00:00] [INF] [2] App: Disposing "EntryPoint"
+[2020-05-27 18:07:22.588 +00:00] [INF] [2] App: Disposing "DeviceAccessEntryPoint"
+[2020-05-27 18:07:22.589 +00:00] [INF] [2] App: Disposing "LibraryMonitorStartup"
+[2020-05-27 18:07:22.589 +00:00] [INF] [2] App: Disposing "ExternalPortForwarding"
+[2020-05-27 18:07:22.618 +00:00] [INF] [2] App: Disposing "LibraryChangedNotifier"
+[2020-05-27 18:07:22.629 +00:00] [INF] [2] App: Disposing "RecordingNotifier"
+[2020-05-27 18:07:22.639 +00:00] [INF] [2] App: Disposing "ServerEventNotifier"
+[2020-05-27 18:07:22.664 +00:00] [INF] [2] App: Disposing "StartupWizard"
+[2020-05-27 18:07:22.665 +00:00] [INF] [2] App: Disposing "UdpServerEntryPoint"
+[2020-05-27 18:07:22.667 +00:00] [INF] [2] App: Disposing "UserDataChangeNotifier"
+[2020-05-27 18:07:22.671 +00:00] [INF] [2] App: Disposing "DeviceManagerEntryPoint"
+[2020-05-27 18:07:22.673 +00:00] [INF] [2] App: Disposing "CollectionManagerEntryPoint"
+[2020-05-27 18:07:22.674 +00:00] [INF] [2] App: Disposing "ActivityLogEntryPoint"
+[2020-05-27 18:07:22.699 +00:00] [INF] [2] App: Disposing "DlnaEntryPoint"
+[2020-05-27 18:07:22.705 +00:00] [INF] [2] Dlna: Disposing SsdpDevicePublisher
+[2020-05-27 18:07:22.832 +00:00] [INF] [2] Dlna: Disposing PlayToManager
+[2020-05-27 18:07:22.836 +00:00] [INF] [2] Dlna: Disposing DeviceDiscovery
+[2020-05-27 18:07:22.843 +00:00] [INF] [2] Dlna: Disposing SsdpCommunicationsServer
+[2020-05-27 18:07:22.847 +00:00] [INF] [2] Dlna: "SsdpCommunicationsServer" disposing _BroadcastListenSocket
+[2020-05-27 18:07:22.854 +00:00] [INF] [2] Dlna: "SsdpCommunicationsServer" Disposing 2 sendSockets
+[2020-05-27 18:07:22.855 +00:00] [INF] [2] Dlna: "SsdpCommunicationsServer" disposing sendSocket from "0.0.0.0"
+[2020-05-27 18:07:22.855 +00:00] [INF] [2] Dlna: "SsdpCommunicationsServer" disposing sendSocket from "172.19.0.2"
+[2020-05-27 18:07:22.856 +00:00] [INF] [2] App: Disposing "NotificationEntryPoint"
+[2020-05-27 18:07:22.861 +00:00] [INF] [2] App: Disposing "EntryPoint"
+[2020-05-27 18:58:15.293 +00:00] [INF] [1] Main: Jellyfin version: "10.5.5"
+[2020-05-27 18:58:15.428 +00:00] [INF] [1] Main: Arguments: ["/jellyfin/jellyfin.dll", "--datadir", "/config", "--cachedir", "/cache", "--ffmpeg", "/usr/bin/ffmpeg"]
+[2020-05-27 18:58:15.463 +00:00] [INF] [1] Main: Operating system: "Linux"
+[2020-05-27 18:58:15.465 +00:00] [INF] [1] Main: Architecture: Arm64
+[2020-05-27 18:58:15.472 +00:00] [INF] [1] Main: 64-Bit Process: True
+[2020-05-27 18:58:15.472 +00:00] [INF] [1] Main: User Interactive: True
+[2020-05-27 18:58:15.473 +00:00] [INF] [1] Main: Processor count: 4
+[2020-05-27 18:58:15.474 +00:00] [INF] [1] Main: Program data path: "/config"
+[2020-05-27 18:58:15.475 +00:00] [INF] [1] Main: Web resources path: "/jellyfin/jellyfin-web"
+[2020-05-27 18:58:15.477 +00:00] [INF] [1] Main: Application directory: "/jellyfin/"
+[2020-05-27 18:58:17.602 +00:00] [INF] [1] ServerConfigurationManager: Setting cache path: "/cache"
+[2020-05-27 18:58:17.822 +00:00] [INF] [1] App: Loading assemblies
+[2020-05-27 18:58:25.473 +00:00] [INF] [1] Main: Kestrel listening on all interfaces
+[2020-05-27 18:58:26.634 +00:00] [INF] [1] App: Running startup tasks
+[2020-05-27 18:58:27.008 +00:00] [INF] [1] TaskManager: Daily trigger for "Extract Chapter Images" set to fire at 05/28/2020 02:00, which is 7:01:32.9919404 from now.
+[2020-05-27 18:58:30.072 +00:00] [INF] [9] TaskManager: "StartupTrigger" fired for task: "Update Plugins"
+[2020-05-27 18:58:30.084 +00:00] [INF] [9] TaskManager: Queueing task "PluginUpdateTask"
+[2020-05-27 18:58:30.112 +00:00] [INF] [10] TaskManager: Executing "Update Plugins"
+[2020-05-27 18:58:30.628 +00:00] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Found ffmpeg version "4.1.4"
+[2020-05-27 18:58:31.348 +00:00] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available "decoders": ["h264", "hevc", "mpeg2video", "aac", "ac3", "mp3"]
+[2020-05-27 18:58:31.858 +00:00] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available "encoders": ["libx264", "h264_omx", "h264_v4l2m2m", "h264_vaapi", "libx265", "hevc_vaapi", "mpeg4", "msmpeg4", "libvpx", "libvpx-vp9", "aac", "ac3", "libmp3lame", "libopus", "libvorbis", "srt"]
+[2020-05-27 18:58:31.866 +00:00] [INF] [1] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: FFmpeg: SetByArgument: "/usr/bin/ffmpeg"
+[2020-05-27 18:58:31.878 +00:00] [INF] [1] App: ServerId: "f1aec331be6942548669fb41bd5137f7"
+[2020-05-27 18:58:32.972 +00:00] [INF] [1] App: Executed all pre-startup entry points in 0:00:01.0174241
+[2020-05-27 18:58:32.972 +00:00] [INF] [1] App: Core startup complete
+[2020-05-27 18:58:34.091 +00:00] [INF] [13] Dlna: Registering publisher for "urn:schemas-upnp-org:device:MediaServer:1" on "172.19.0.2"
+[2020-05-27 18:58:34.377 +00:00] [INF] [1] App: Executed all post-startup entry points in 0:00:01.4037394
+[2020-05-27 18:58:34.377 +00:00] [INF] [1] Main: Startup complete 0:00:20.7783819
+[2020-05-27 18:58:40.703 +00:00] [ERR] [9] TaskManager: Error
+System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsyncInternal(HttpRequestOptions options, HttpMethod httpMethod)
+   at Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync(HttpRequestOptions options, HttpMethod httpMethod)
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePackages(CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePluginUpdates(CancellationToken cancellationToken)+MoveNext()
+   at Emby.Server.Implementations.Updates.InstallationManager.GetAvailablePluginUpdates(CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at System.Linq.AsyncEnumerable.<ToListAsync>g__Core|620_0[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in d:\a\1\s\Ix.NET\Source\System.Linq.Async\System\Linq\Operators\ToList.cs:line 27
+   at System.Linq.AsyncEnumerable.<ToListAsync>g__Core|620_0[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in d:\a\1\s\Ix.NET\Source\System.Linq.Async\System\Linq\Operators\ToList.cs:line 27
+   at Emby.Server.Implementations.ScheduledTasks.PluginUpdateTask.Execute(CancellationToken cancellationToken, IProgress`1 progress)
+   at Emby.Server.Implementations.ScheduledTasks.ScheduledTaskWorker.ExecuteInternal(TaskOptions options)
+[2020-05-27 18:58:40.927 +00:00] [INF] [9] TaskManager: "Update Plugins" Failed after 0 minute(s) and 10 seconds
+[2020-05-27 18:58:41.347 +00:00] [INF] [9] TaskManager: ExecuteQueuedTasks
