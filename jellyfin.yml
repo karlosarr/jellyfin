@@ -5,10 +5,10 @@ services:
      image: jellyfin/jellyfin:latest
      ports:
        - 8096:8096
-     #volumes:
-      # - ./config:/config 
-      # - ./cache:/cache
-      # - ./media:/media
+     volumes:
+       - ./config/config:/config 
+       - ./config/cache:/cache
+       - ./config/media:/media
      networks:
        - net
 networks:
